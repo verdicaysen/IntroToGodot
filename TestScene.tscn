@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8tfwgbxq6u28"]
+[gd_scene load_steps=3 format=3 uid="uid://c8tfwgbxq6u28"]
 
-[ext_resource type="Script" path="res://IntroToScripting.gd" id="1_mydbc"]
+[ext_resource type="Texture2D" uid="uid://dc2b7xhlgac5s" path="res://Sprites/Player.png" id="1_ek7w3"]
+[ext_resource type="Script" path="res://Move.gd" id="2_k0qgc"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_mydbc")
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(44, 23)
+texture = ExtResource("1_ek7w3")
+script = ExtResource("2_k0qgc")
