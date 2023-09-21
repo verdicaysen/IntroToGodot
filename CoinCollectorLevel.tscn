@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://1mmcpviu017f"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_2ctsp"]
+[ext_resource type="Texture2D" uid="uid://dc2b7xhlgac5s" path="res://Sprites/Player.png" id="1_q5f0m"]
+[ext_resource type="PackedScene" uid="uid://cbt3emse20o5i" path="res://Coin.tscn" id="3_bnl6w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3xhg"]
+size = Vector2(58, 70)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2ctsp")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+position = Vector2(46, 32)
+texture = ExtResource("1_q5f0m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(45, 47)
+shape = SubResource("RectangleShape2D_n3xhg")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(44, 49)
+zoom = Vector2(1.575, 1.575)
+
+[node name="Coin" parent="." instance=ExtResource("3_bnl6w")]
+
+[node name="Coin2" parent="." instance=ExtResource("3_bnl6w")]
+position = Vector2(352, -7)
+
+[node name="Coin3" parent="." instance=ExtResource("3_bnl6w")]
+position = Vector2(523, -7)
